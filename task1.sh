@@ -12,5 +12,6 @@ truncate -s 10k file{1..100}.txt
   done 
 
 chmod 444 -R file{1..100}.txt
+chattr +i file{1..100}.txt
 touch -d "2 days ago" file{1..100}.txt
 echo completed 

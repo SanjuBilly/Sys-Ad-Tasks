@@ -8,7 +8,7 @@ touch file{1..100}.txt
 truncate -s 10k file{1..100}.txt
 
  for n in {1..100}; do
-    cat /dev/urandom | tr -dc A-Za-z0-9 | fold -w 16 | head -c 16 > file$n.txt 
+    cat /dev/urandom | tr -dc A-Za-z0-9 | head -c 16 > file$n.txt 
   done 
 
 chmod 444 -R file{1..100}.txt
